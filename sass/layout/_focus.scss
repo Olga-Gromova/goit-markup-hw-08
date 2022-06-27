@@ -5,29 +5,48 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--header-second-color);
+    text-align: center;
+    @media screen and (min-width: 768px) {
+    text-align: left;
+    }
 }
 
 .features {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;  
+    }
+   
 }
 
 .focus__list {
+
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+ 
 }
 
 .focus__data {
-    width: 270px;
+    // width: 270px;
     height: 251px;
+    @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+    }
+    @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px) / 4);
+    }
 }
 
-.focus__data:not(:last-child) {
-    margin-right: 30px;
-}
+// .focus__data:not(:last-child) {
+//     // margin-right: 30px;
+// }
 
 .focus__icon {
     display: flex;
-    width: 270px;
+    // width: 270px;
     height: 120px;
     background: #F5F4FA;
     border-radius: 4px;
@@ -49,4 +68,6 @@
     letter-spacing: 0.03em;
     color: var(--main-text-color);
     margin-top: 10px;
+   
+    
 }
