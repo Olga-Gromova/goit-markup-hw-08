@@ -1,0 +1,53 @@
+/* ----------PORTFOLIO PAGE------------------ */
+
+.portfolio-main-page {
+    border-top: 1px solid #ECECEC;
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+/*--------------PORTGOLIO-BUTTONS-FILTER------------------ */
+
+.btn-filter {
+    background: #F5F4FA;
+    border-radius: 4px;
+    font-family: inherit;
+    color: #212121;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    border: none;
+    height: 38px;
+    min-width: 73px;
+    transition-property: background, box-shadow, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+        background: var(--current-color);
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+            0px 1px 2px rgba(0, 0, 0, 0.08),
+            0px 2px 2px rgba(0, 0, 0, 0.12);
+        color: var(--header-first-color);
+        font-weight: 500;
+        cursor: pointer;
+        outline: none;
+    }
+
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.filter:not(:last-child) {
+    margin-right: 8px;
+}
+
+.btn-filter {
+    padding: 6px 22px 6px 22px;
+}
