@@ -588,6 +588,12 @@ body {
 @media screen and (min-width: 768px) {
   .nav__title {
     display: flex;
+    margin-left: 88px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav__title {
+    display: flex;
     margin-left: 93px;
   }
 }
@@ -597,13 +603,28 @@ body {
 }
 @media screen and (min-width: 768px) {
   .contact {
+    display: inline;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact {
     display: flex;
     margin-left: auto;
   }
 }
 
 .contact__data {
-  display: flex;
+  margin-left: 84px;
+}
+@media screen and (min-width: 1200px) {
+  .contact__data {
+    display: flex;
+  }
+}
+
+.contact__data:not(:last-child) {
+  margin-bottom: 10px;
 }
 
 .contact__icon {
@@ -618,8 +639,10 @@ body {
   margin-right: 50px;
 }
 
-.contact__data:not(:first-child) {
-  margin-left: 50px;
+@media screen and (min-width: 1200px) {
+  .contact__data:not(:first-child) {
+    margin-left: 50px;
+  }
 }
 
 .nav__link {
@@ -668,11 +691,23 @@ body {
 
 .contact__link {
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
   align-items: center;
+}
+@media screen and (min-width: 1200px) {
+  .contact__link {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .button-mobile {
+    display: none;
+  }
 }
 
 .mob-menu {
