@@ -122,8 +122,18 @@
     text-align: center;   
     background-color: transparent;
     border: none;
+    transition-property: background;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
    
 }
+
+.btn-modal-open:hover,
+.btn-modal-open:focus {
+    background: var(--btn-order-active);
+    outline: none;
+}
+
 
 .btn-mobile-icon {
     width: 100%;
@@ -135,3 +145,42 @@
 
 }
 
+.btn-mobile-icon:hover,
+.btn-mobile-icon:focus {
+    fill: #2196F3;
+    background-color: #2196F3;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-mobile-close {
+    position: absolute;
+    margin-top: 10px;
+    margin-right: 15px;
+    right: 0;
+    top: 0;
+
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+
+}
+
+.mobile-icon-close {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    fill: inherit;
+    background-color: inherit;
+}
+
+.mobile-icon-close:hover,
+.mobile-icon-close:focus {
+    fill: #2196F3;
+    background-color: #2196F3;
+    cursor: pointer;
+    outline: none;
+}
