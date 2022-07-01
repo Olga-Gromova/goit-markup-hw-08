@@ -3,17 +3,41 @@
     ;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url(../images/Img_Main_Page.jpg);
+        url(../images/mobile/Header-img-mobile-1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     flex-grow: 1;
     padding-top: 118px;
     padding-bottom: 118px;
+    @include retina {
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2),
+    rgba(25, 28, 38, 0.2)),
+    url(../images/mobile/Header-img-mobile-2.jpg);
+    }
+
+    @include tablet {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)),
+    url(../images/tablet/Header-img-tablet-1.jpg);
+    @include retina {
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2),
+     rgba(25, 28, 38, 0.2)),
+    url(../images/tablet/Header-img-tablet-2.jpg);
+    }
+    }
    
-    @media screen and (min-width: 1200px) {
-        padding-top: 200px;
-        padding-bottom: 200px;
+   @include desktop {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4),
+     rgba(47, 48, 58, 0.4)),
+    url(../images/Img_Main_Page.jpg);
+    @include retina {
+    background-image: linear-gradient(rgba(25, 28, 38, 0.2),
+     rgba(25, 28, 38, 0.2)),
+    url(../images/Img_Main_Page_2.jpg);
+    }
     }
 }
 

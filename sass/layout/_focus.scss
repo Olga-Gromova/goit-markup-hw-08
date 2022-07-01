@@ -30,7 +30,7 @@
 }
 
 .focus__data {
-    // width: 270px;
+    
     height: 251px;
     @media screen and (min-width: 768px) {
     width: calc((100% - 30px) / 2);
@@ -40,9 +40,6 @@
     }
 }
 
-// .focus__data:not(:last-child) {
-//     // margin-right: 30px;
-// }
 
 .focus__icon {
     display: flex;
