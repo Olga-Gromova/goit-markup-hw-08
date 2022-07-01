@@ -132,6 +132,7 @@
 .btn-modal-open:focus {
     background: var(--btn-order-active);
     outline: none;
+    
 }
 
 
@@ -148,8 +149,7 @@
 .btn-mobile-icon:hover,
 .btn-mobile-icon:focus {
     fill: #2196F3;
-    
-    cursor: pointer;
+    background-color: transparent;
     outline: none;
 }
 
@@ -180,6 +180,6 @@
 .mobile-icon-close:hover,
 .mobile-icon-close:focus {
     fill: #2196F3;
-    cursor: pointer;
+    background-color: transparent;
     outline: none;
 }

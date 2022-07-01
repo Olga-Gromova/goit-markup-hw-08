@@ -96,15 +96,17 @@
     bottom: 0;
     right: 0;
     top: 44px;
+    opacity: 1;
+    transform: scaleX(1);
 
+    @include tablet {
     display: block;
     width: 100%;
     height: 4px;
     background-color: #2196F3;
     border-radius: 2px;
-
-    opacity: 1;
-    transform: scaleX(1);
+    }
+    
 }
 
 .nav__link {
@@ -137,6 +139,10 @@
         }
 }
 
+.mob-box-contact {
+    margin-left: 40px;
+}
+
 .button-mobile {
     @media screen and (min-width: 768px){
         display: none;
@@ -162,6 +168,9 @@
     align-items: flex-start;
     
     }
+}
+.mob-menu-list {
+    margin-left: 40px;
 }
 
 .mob-menu-item {
@@ -207,6 +216,8 @@
 
 .mob-social {
     display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
     margin-top: 64px;  
     
     
@@ -218,7 +229,7 @@
 }
 
 .mob-social-item:not(:first-child) {
-    padding-left: 10px;
+    padding-left: 5px;
 }
 
 .mob-social-link {
@@ -228,4 +239,6 @@
     line-height: 1.22;
     letter-spacing: 0.02em;
     
-    color: #2196F3;}
+    color: #2196F3;
+    width: calc((100% - 5px) / 3);
+}

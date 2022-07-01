@@ -335,7 +335,7 @@ body {
 .btn-mobile-icon:hover,
 .btn-mobile-icon:focus {
   fill: #2196F3;
-  cursor: pointer;
+  background-color: transparent;
   outline: none;
 }
 
@@ -364,7 +364,7 @@ body {
 .mobile-icon-close:hover,
 .mobile-icon-close:focus {
   fill: #2196F3;
-  cursor: pointer;
+  background-color: transparent;
   outline: none;
 }
 
@@ -709,13 +709,17 @@ body {
   bottom: 0;
   right: 0;
   top: 44px;
-  display: block;
-  width: 100%;
-  height: 4px;
-  background-color: #2196F3;
-  border-radius: 2px;
   opacity: 1;
   transform: scaleX(1);
+}
+@media screen and (min-width: 768px) {
+  .current::after {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #2196F3;
+    border-radius: 2px;
+  }
 }
 
 .nav__link {
@@ -749,6 +753,10 @@ body {
   }
 }
 
+.mob-box-contact {
+  margin-left: 40px;
+}
+
 @media screen and (min-width: 768px) {
   .button-mobile {
     display: none;
@@ -771,6 +779,10 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.mob-menu-list {
+  margin-left: 40px;
 }
 
 .mob-menu-item {
@@ -808,6 +820,8 @@ body {
 
 .mob-social {
   display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
   margin-top: 64px;
 }
 
@@ -817,7 +831,7 @@ body {
 }
 
 .mob-social-item:not(:first-child) {
-  padding-left: 10px;
+  padding-left: 5px;
 }
 
 .mob-social-link {
@@ -826,6 +840,7 @@ body {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196F3;
+  width: calc((100% - 5px) / 3);
 }
 
 .main-page {
@@ -1362,8 +1377,14 @@ body {
 /* ----------PORTFOLIO PAGE------------------ */
 .portfolio-main-page {
   border-top: 1px solid #ECECEC;
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio-main-page {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 /*--------------PORTGOLIO-BUTTONS-FILTER------------------ */
@@ -1395,12 +1416,15 @@ body {
 
 .filters {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 8px;
 }
-
-.filter:not(:last-child) {
-  margin-right: 8px;
+@media screen and (min-width: 768px) {
+  .filters {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
 .btn-filter {
@@ -1408,9 +1432,30 @@ body {
 }
 
 .portfolio-data {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  margin-bottom: -30px;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .portfolio-data {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+  }
+}
+
+.portfolio-sample {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio-sample {
+    width: calc(50% - 30px);
+    margin-left: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio-sample {
+    width: calc(33.3333333333% - 30px);
+  }
 }
 
 .portfolio-thumb:hover::before {
@@ -1421,7 +1466,7 @@ body {
 .portfolio-thumb {
   position: relative;
   overflow: hidden;
-  width: 370px;
+  width: 100%;
 }
 
 .portfolio-overlay {
@@ -1458,14 +1503,21 @@ body {
 }
 
 .portfolio-sample-link {
-  width: 370px;
-  height: 404px;
+  width: 100%;
+  height: 100%;
   background: #FFFFFF;
   border: 1px solid #EEEEEE;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
   transition-property: background, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .portfolio-sample-link {
+    height: 404px;
+  }
 }
 .portfolio-sample-link:hover, .portfolio-sample-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -1474,13 +1526,20 @@ body {
   outline: none;
 }
 
-.portfolio-sample:nth-last-child(n+6) {
-  margin-bottom: 30px;
+@media screen and (min-width: 768px) {
+  .portfolio-sample:nth-last-child(n+6) {
+    margin-bottom: 30px;
+  }
 }
 
 .portfolio-img {
-  width: 370px;
-  height: 294px;
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 768px) {
+  .portfolio-img {
+    height: 294px;
+  }
 }
 
 .portfolio-title {
@@ -1494,8 +1553,13 @@ body {
   line-height: 2;
   letter-spacing: 0.06em;
   color: #212121;
-  min-width: 322px;
+  width: 100%;
   text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .portfolio-name {
+    min-width: 322px;
+  }
 }
 
 .portfolio-type {

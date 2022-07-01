@@ -1,8 +1,33 @@
 .portfolio-data {
+    // display: flex;
+    // flex-wrap: wrap;
+    margin-bottom: -30px;
+    // gap: 30px;
+    justify-content: center;
+    
+    @include tablet {
     display: flex;
+    // gap: 0px;
+    // justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: space-between;
+    margin-left: -30px;
+    }
+    
 }
+
+.portfolio-sample {
+    margin-bottom: 30px;
+    
+    @media screen and (min-width: 768px) {
+    width: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+    width: calc(100% / 3 - 30px);
+    }
+    }
+
 
 .portfolio-thumb:hover::before {
     content: '';
@@ -13,7 +38,8 @@
 .portfolio-thumb {
     position: relative;
     overflow: hidden;
-    width: 370px;
+    // width: 370px;
+    width: 100%;
 }
 
 .portfolio-overlay {
@@ -52,14 +78,21 @@
 }
 
 .portfolio-sample-link {
-    width: 370px;
-    height: 404px;
+    // width: 370px;
+    width: 100%;
+    height: 100%;
     background: #FFFFFF;
     border: 1px solid #EEEEEE;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     transition-property: background, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @include tablet {
+    height: 404px;
+    // display: block;
+    }
     &:hover,
     &:focus {
     box-shadow:
@@ -75,12 +108,19 @@
 
 
 .portfolio-sample:nth-last-child(n+6) {
+    @include tablet {
     margin-bottom: 30px;
+    }
 }
 
 .portfolio-img {
-    width: 370px;
-    height: 294px;
+    // width: 370px;
+    width: 100%;
+    height: auto;
+    @include tablet {
+    height: 294px;    
+    }
+    
 }
 
 .portfolio-title {
@@ -94,8 +134,14 @@
     line-height: 2.00;
     letter-spacing: 0.06em;
     color: #212121;
-    min-width: 322px;
+    width: 100%;
+    // min-width: 300px;
     text-align: left;
+    @include tablet {
+    min-width: 322px;
+    }
+    
+
 }
 
 .portfolio-type {

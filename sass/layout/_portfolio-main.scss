@@ -2,8 +2,12 @@
 
 .portfolio-main-page {
     border-top: 1px solid #ECECEC;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @include tablet {
     padding-top: 94px;
     padding-bottom: 94px;
+    }
 }
 
 /*--------------PORTGOLIO-BUTTONS-FILTER------------------ */
@@ -24,6 +28,8 @@
     transition-property: background, box-shadow, color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+
     &:hover,
     &:focus {
         background: var(--current-color);
@@ -40,14 +46,22 @@
 
 .filters {
     display: flex;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 8px;
+    @include tablet {
     justify-content: center;
-    margin-bottom: 50px;
-}
+    margin-bottom: 50px;    
+    }
 
-.filter:not(:last-child) {
-    margin-right: 8px;
 }
+// DELETE, IF ALL WILL BE OK
+
+// .filter:not(:last-child) {
+//     margin-right: 8px;
+// }
 
 .btn-filter {
     padding: 6px 22px 6px 22px;
+   
 }
