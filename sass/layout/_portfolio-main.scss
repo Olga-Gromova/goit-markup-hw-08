@@ -4,7 +4,7 @@
     border-top: 1px solid #ECECEC;
     padding-top: 60px;
     padding-bottom: 60px;
-    @include tablet {
+    @include desktop {
     padding-top: 94px;
     padding-bottom: 94px;
     }
@@ -13,6 +13,7 @@
 /*--------------PORTGOLIO-BUTTONS-FILTER------------------ */
 
 .btn-filter {
+    
     background: #F5F4FA;
     border-radius: 4px;
     font-family: inherit;
@@ -46,12 +47,17 @@
 
 .filters {
     display: flex;
+    justify-content: center;
     margin-bottom: 40px;
     flex-wrap: wrap;
     gap: 8px;
     @include tablet {
-    justify-content: center;
-    margin-bottom: 50px;    
+    
+    margin-bottom: 30px;    
+    }
+    @include desktop {
+    
+    margin-bottom: 50px;
     }
 
 }

@@ -80,11 +80,6 @@ body {
   padding-right: 15px;
   margin: 0 auto;
 }
-@media screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-  }
-}
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
@@ -437,7 +432,6 @@ body {
   max-width: 320px;
   width: 100%;
   min-height: 609px;
-  height: 100%;
   background-color: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
@@ -451,7 +445,7 @@ body {
     max-width: 450px;
     width: 100%;
     min-height: 609px;
-    height: 100%;
+    height: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -984,11 +978,12 @@ body {
 .focus__list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
 }
 
 .focus__data {
-  height: 251px;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .focus__data {
@@ -1157,20 +1152,6 @@ body {
   height: auto;
   align-items: center;
   justify-content: center;
-  flex-shrink: 1;
-  flex-grow: 1;
-}
-@media screen and (min-width: 768px) {
-  .team-data__photo {
-    width: 354px;
-    height: 374px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .team-data__photo {
-    width: 270px;
-    height: 260px;
-  }
 }
 
 .team-data__title {
@@ -1212,6 +1193,7 @@ body {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 28px;
   line-height: 1.18;
@@ -1220,6 +1202,7 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .our-clients__title {
+    margin-bottom: 50px;
     font-size: 36px;
     line-height: 1.17;
   }
@@ -1236,7 +1219,6 @@ body {
 .our-clients__link {
   width: calc((100% - 30px) / 2);
   height: 92px;
-  margin-top: 30px;
 }
 @media screen and (min-width: 768px) {
   .our-clients__link {
@@ -1246,7 +1228,6 @@ body {
 @media screen and (min-width: 1200px) {
   .our-clients__link {
     width: calc((100% - 150px) / 6);
-    margin-top: 50px;
   }
 }
 
@@ -1452,7 +1433,7 @@ body {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .portfolio-main-page {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -1488,13 +1469,18 @@ body {
 
 .filters {
   display: flex;
+  justify-content: center;
   margin-bottom: 40px;
   flex-wrap: wrap;
   gap: 8px;
 }
 @media screen and (min-width: 768px) {
   .filters {
-    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filters {
     margin-bottom: 50px;
   }
 }
