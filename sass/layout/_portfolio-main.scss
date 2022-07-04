@@ -47,12 +47,12 @@
 
 .filters {
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     margin-bottom: 40px;
     flex-wrap: wrap;
     gap: 8px;
     @include tablet {
-    
+    justify-content: center;
     margin-bottom: 30px;    
     }
     @include desktop {
